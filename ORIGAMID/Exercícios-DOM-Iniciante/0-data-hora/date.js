@@ -1,3 +1,4 @@
+
 <html>
 	<head>
 	<title>::: O Objeto Date :::</title>
@@ -32,7 +33,6 @@
 				else if (m==9) mes = "Outubro";
 				else if (m==10) mes = "Novembro";
 				else if (m==11) mes = "Dezembro";
-
 				return dia_sem+", "+dia+" de "+mes+" de "+ano;
 			}
 			console.log(formataData())
