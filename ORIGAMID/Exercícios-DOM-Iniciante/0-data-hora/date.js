@@ -1,9 +1,11 @@
-
 <html>
 	<head>
 	<title>::: O Objeto Date :::</title>
-		<script>
-			function formataData(data = new Date()) {
+		<script type="text/javascript">
+			// funcao que retorna a data no formato : (dia_semana, dia, mes e ano)
+			// exemplo: Quarta-Feira, 8 de Agosto de 2018
+			
+			function formataData(data = new Date()) { 
 				var d_sem = data.getDay(); // Retorna o dia da semana (0 a 6)
 				var dia = data.getDate(); // Retorna o dia do mês (1 a 31)
 				var m = data.getMonth(); // Retorna o mes (0 a 11)
@@ -33,12 +35,20 @@
 				else if (m==9) mes = "Outubro";
 				else if (m==10) mes = "Novembro";
 				else if (m==11) mes = "Dezembro";
+
 				return dia_sem+", "+dia+" de "+mes+" de "+ano;
+			
 			}
-			console.log(formataData())
+			
+			window.onload = function(){
+            document.getElementById("localData").innerHTML = formataData();
+        	};
 		</script>
 	</head>
 
-	<body >
+	<body>
+		<div id="localData">
+			Texto
+		</div>
 	</body>
 </html>
